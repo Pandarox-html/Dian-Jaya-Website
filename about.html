@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tentang Kami- Electronic Repair</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #004aad;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .content {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #004aad;
+      text-align: center;
+    }
+    .mission, .team {
+      margin-top: 30px;
+    }
+    .team img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 10px;
+    }
+    .footer {
+      background: #004aad;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Dian Jaya Abadi</h1>
+  <nav>
+    <a href="index.html">Beranda</a>
+    
+   
+  </nav>
+</header>
+
+<section class="content">
+  <h2>Tentang Kami</h2>
+  <p>Kami adalah penyedia layanan servis elektronik terpercaya sejak 2003. Kami melayani perbaikan HP, laptop, tablet, dan perangkat elektronik lainnya dengan kualitas terbaik.</p>
+
+  <div class="mission">
+    <h3>Misi Kami</h3>
+    <p>Memberikan pelayanan servis cepat, terjangkau, dan terpercaya kepada seluruh pelanggan dengan teknologi dan teknisi terbaik.</p>
+  </div>
+
+  <div class="team">
+    <h3></h3>
+    <p></p>
+    <div style="display:flex; justify-content:center; flex-wrap:wrap;">
+    
+    </div>
+  </div>
+</section>
+<div>
+    <section id="contact" class="contact">
+  
+
+  <div class="hours" style="margin-top: 20px;">
+    <center>
+<h4>🕒 Jam Operasional:</h4>
+    </center>
+    <table style="margin: 0 auto; border-collapse: collapse; width: 300px;">
+      <tr style="background-color: #004aad; color: white;">
+        <th style="padding: 10px; border: 1px solid #ddd;">Hari</th>
+        <th style="padding: 10px; border: 1px solid #ddd;">Jam Buka</th>
+      </tr>
+      <tr>
+        <td style="padding: 8px; border: 1px solid #ddd;">Senin - Kamis</td>
+        <td style="padding: 8px; border: 1px solid #ddd;">09.30 – 15.30</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px; border: 1px solid #ddd;">Jumat</td>
+        <td style="padding: 8px; border: 1px solid #ddd;">Libur</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px; border: 1px solid #ddd;">Sabtu - Minggu</td>
+        <td style="padding: 8px; border: 1px solid #ddd;">09.30 – 15.30</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="location" style="margin-top: 30px;">
+ 
+  </div>
+</section>
+
+</div>
+<i>
+<div class="footer">
+  &copy; 2025 Dian Jaya Abadi
+</div>
+</i>
+
+<script>
+  let currentIndex = 0;
+  const carousel = document.getElementById('carousel');
+  const slides = carousel.children;
+  const totalSlides = slides.length;
+
+  function updateSlide() {
+    const width = slides[0].clientWidth;
+    carousel.style.transform = `translateX(-${currentIndex * width}px)`;
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlide();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlide();
+  }
+
+  setInterval(nextSlide, 4000); // slide otomatis setiap 4 detik
+  window.addEventListener('resize', updateSlide); // responsif
+</script>
+</body>
+</html>
